@@ -17,6 +17,7 @@
 
 - (NSString *) mainCharacter {
     /* WORK HERE */
+    // Kavan change to get difference with checkpoint
     return @"Dorothy";
 }
 
