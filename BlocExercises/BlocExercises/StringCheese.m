@@ -11,36 +11,39 @@
 @implementation StringCheese
 
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
-    /* WORK HERE */
-    return nil;
+    NSString *fullSentence = [NSString stringWithFormat:@"My favorite cheese is %@.", cheeseName];
+    return fullSentence;
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
     if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
-        /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
+       NSRange cheeseRange = [cheeseName rangeOfString:@" cheese"];
+       NSString *shortName = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+        
+       // NSString *shortName = [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@""];
     } else {
-        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
+       NSString *shortName = cheeseName;
     }
 
     /*
      (You will learn more about if/else statements in a later checkpoint.)
      */
 
-    return nil;
+    return shortName;
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
     if (cheeseCount == 1) {
-        /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
+        NSString *phrase = @"1 cheese";
     } else {
-        /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
+        NSString *phrase = [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
     }
     
     /*
      (You will learn more about if/else statements in a later checkpoint.)
      */
     
-    return nil;
+    return phrase;
 }
 
 @end
