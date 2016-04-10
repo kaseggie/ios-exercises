@@ -16,34 +16,28 @@
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
+   
+    NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+    NSMutableString *shortMutableName = [cheeseName mutableCopy];
+    
     if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
-       NSRange cheeseRange = [cheeseName rangeOfString:@" cheese"];
-       NSString *shortName = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
-        
-       // NSString *shortName = [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@""];
-    } else {
-       NSString *shortName = cheeseName;
+        [shortMutableName replaceCharactersInRange:cheeseRange withString:@""];
     }
 
-    /*
-     (You will learn more about if/else statements in a later checkpoint.)
-     */
+    return shortMutableName;
 
-    return shortName;
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
-    if (cheeseCount == 1) {
-        NSString *phrase = @"1 cheese";
-    } else {
-        NSString *phrase = [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
+    
+    NSMutableString *mutableCheesePhrase = [NSMutableString stringWithString:@"1 cheese"];
+    if (cheeseCount > 1) {
+        NSString *manyCheeses = [NSString stringWithFormat:@"%ld cheeses",(long)cheeseCount];
+        [mutableCheesePhrase setString:manyCheeses];
+        // To discuss: do I always need to use [NSString stringWithFormat...] to add variables to a NSMutableString
     }
     
-    /*
-     (You will learn more about if/else statements in a later checkpoint.)
-     */
-    
-    return phrase;
+    return mutableCheesePhrase;
 }
 
 @end
