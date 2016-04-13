@@ -18,7 +18,7 @@
     return faveDrink;
 }
 
-- (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
+/*- (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     NSArray *faveDrinkArray;
     for (NSInteger idx = 0; idx < charactersArray.count; idx++) {
         
@@ -27,7 +27,7 @@
     }
     return faveDrinkArray;
  }
-
+*/
 
 /* - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     
