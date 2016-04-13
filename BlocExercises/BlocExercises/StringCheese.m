@@ -16,13 +16,14 @@
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
+    NSString *shortName;
     if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
        NSRange cheeseRange = [cheeseName rangeOfString:@" cheese"];
-       NSString *shortName = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+       shortName = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
         
        // NSString *shortName = [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@""];
     } else {
-       NSString *shortName = cheeseName;
+       shortName = cheeseName;
     }
 
     /*
@@ -33,10 +34,11 @@
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
+    NSString *phrase;
     if (cheeseCount == 1) {
-        NSString *phrase = @"1 cheese";
+        phrase = @"1 cheese";
     } else {
-        NSString *phrase = [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
+        phrase = [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
     }
     
     /*
