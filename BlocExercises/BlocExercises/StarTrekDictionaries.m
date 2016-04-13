@@ -19,20 +19,20 @@
 }
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
-    NSArray *faveDrinkArray;
-    for (NSInteger idx = 0; idx < charactersArray.count; idx++) {
+    NSMutableArray *faveDrinkArray = [NSMutableArray array];
+    for (int i = 0; i < charactersArray.count; i++) {
         
-    faveDrinkArray[idx] = charactersArray[idx, @"favorite drink"];
+        faveDrinkArray[i] = [charactersArray[i] valueForKey:@"favorite drink"];
   
     }
     return faveDrinkArray;
  }
 
 
-/* - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
-    
- WORK HERE
-    return @{};
+ - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
+    NSMutableDictionary *myCharacterDictionary = [characterDictionary mutableCopy];
+    [myCharacterDictionary setObject:[NSString stringWithFormat:@"Toby or not Toby"] forKey:@"quote"];
+    return myCharacterDictionary;
 }
-*/
+
 @end
