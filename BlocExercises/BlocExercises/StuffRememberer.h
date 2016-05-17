@@ -10,8 +10,8 @@
 
 @interface StuffRememberer : NSObject
 
-@property (nonatomic, strong) NSArray *myArray;
-@property (nonatomic, copy) NSArray *myCopyArray;
+@property (nonatomic, strong) NSMutableArray *myArray;
+@property (nonatomic, copy) NSMutableArray *myCopyArray;
 @property (assign) CGFloat myFloat;
 
 /*
