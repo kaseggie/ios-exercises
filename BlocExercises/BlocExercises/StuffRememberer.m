@@ -27,8 +27,8 @@
 }
 
 - (NSMutableArray *) arrayYouShouldCopy {
-    NSMutableArray *myCopyArray = [self.myCopyArray mutableCopy];
-    return myCopyArray;
+    //NSMutableArray *myCopyArray = [self.myCopyArray mutableCopy];
+    return self.myCopyArray;
 }
 
 - (CGFloat) floatYouShouldRemember {
