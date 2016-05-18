@@ -36,10 +36,14 @@ Loops
 */
 
 // Use a closed range loop to print 1 - 10, inclusively
-// WORK HERE
+for index in 1 ... 10 {
+    print(index)
+}
 
 // Use a half-closed range loop to print 1 - 10, inclusively
-// WORK HERE
+for index in 1 ..< 11 {
+    print(index)
+}
 
 let worf = [
     "name": "Worf",
@@ -58,13 +62,22 @@ let characters = [worf, picard]
 
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
-    // WORK HERE
+   // let arrayFaveDrinks = worf["favorite drink"] + picard["favorite drink"]
+    let dictionary1 = characters [0]
+    print(dictionary1)
+    let dictionary2 = characters [1]
+    for item in characters {
+        
+    }
+    var favoriteDrinks1 = dictionary1["favorite drink"]
+    var favoriteDrinks2 = dictionary2["favorite drink"]
+    
     return []
 }
 
-let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
+// let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
 
-favoriteDrinks
+// favoriteDrinks
 
 /*
 
@@ -75,8 +88,8 @@ Optionals
 func emailFromUserDict(userDict : [String : String]) -> String {
     // Return the user's email address from userDict, or return "" if they don't have one
     
-    // WORK HERE
-    return "user@example.com"
+   // let emailString = userDict["email"]
+  // return emailString
 }
 
 
