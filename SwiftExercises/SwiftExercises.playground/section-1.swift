@@ -24,8 +24,6 @@ var numberArray = [1, 2, 3, 4]
 // Add 5 to this array
 numberArray += [5]
 
-//OR numberArray.insert(5, atIndex:4)
-
 var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // Add 5 : "five" to this dictionary
 numberDictionary[5] = "five"
@@ -38,14 +36,10 @@ Loops
 */
 
 // Use a closed range loop to print 1 - 10, inclusively
-for index in 1 ... 10 {
-    print(index)
-}
+// WORK HERE
 
 // Use a half-closed range loop to print 1 - 10, inclusively
-for index in 1 ..< 11 {
-    print(index)
-}
+// WORK HERE
 
 let worf = [
     "name": "Worf",
@@ -64,16 +58,7 @@ let characters = [worf, picard]
 
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
-   
-    //***************
-    var favoriteDrinksString = ""
-    
-    for (key, value) in worf {
-            if key == "favorite drink" {
-                favoriteDrinksString +=
-            }
-        }
-    
+    // WORK HERE
     return []
 }
 
@@ -116,9 +101,6 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 // WORK HERE - make your function and pass `strings` in
-func arrayToString(strings: [String]) -> String {
-    
-}
 
 let expectedOutput = "milk;eggs;bread;challah"
 
